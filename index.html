@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamVibe Navbar</title>
+    <title>StreamVibe</title>
     <link rel="stylesheet" href="styles/ex.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="nav-navbar-left">
             <a href="#" class="streamvibe-logo">
                 <img src="assets/logo.png" alt="StreamVibe Logo" class="logo">
-                <p class="streamvibe-name">1234StreamVibe</p>
+                <p class="streamvibe-name">StreamVibe</p>
             </a>
             </div>
         
@@ -31,7 +31,6 @@
                 <input type="text" class="search-input" placeholder="Search..." aria-label="Search">
                 <i class="search-icon">
                     <img src="assets/search-Icon.png" alt="search-icon">
-                    <img src="assets/search-Icon.png" alt="search-icon">
                 </i>
             </div>
             <div class="notification-icon">
@@ -42,8 +41,27 @@
                 </a>
             </div>
         </div>
-        <div class="icon-button">
-          <img src="assets/icon-btn.png" alt="icon-btn">
+        <!-- Authentication Section -->
+        <div class="auth-section" id="authSection">
+            <!-- Login Button (shown when not authenticated) -->
+            <div class="login-button" id="loginButton">
+                <a href="login.html" class="login-link">
+                    <button class="auth-btn login-btn-nav">Login</button>
+                </a>
+            </div>
+
+            <!-- User Profile (shown when authenticated) -->
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <div class="user-info">
+                    <img src="assets/icon-btn.png" alt="User Avatar" class="user-avatar" id="userAvatar">
+                    <span class="user-name" id="userName">User</span>
+                </div>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="profile.html" class="dropdown-item">Profile</a>
+                    <a href="#" class="dropdown-item">Settings</a>
+                    <a href="#" class="dropdown-item" id="logoutBtn">Logout</a>
+                </div>
+            </div>
         </div>
       </header>
 
@@ -307,6 +325,10 @@
 
 
 
+
+    <!-- Include JavaScript files -->
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

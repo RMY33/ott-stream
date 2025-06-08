@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVibe - Sign Up</title>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-section">
+                    <span class="logo-dot"></span>
+                    <h1 class="logo-text">learn.ai</h1>
+                </div>
+                <h2 class="login-title">Sign Up</h2>
+            </div>
+            
+            <form class="login-form" id="signupForm">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="form-input" 
+                        placeholder="Enter your full name"
+                        required
+                    >
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="Enter email"
+                        required
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="password-input-container">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-input" 
+                            placeholder="Enter password"
+                            required
+                        >
+                        <button type="button" class="password-toggle" id="passwordToggle">
+                            <span class="toggle-icon">👁️</span>
+                        </button>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <div class="password-input-container">
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            class="form-input" 
+                            placeholder="Confirm password"
+                            required
+                        >
+                        <button type="button" class="password-toggle" id="confirmPasswordToggle">
+                            <span class="toggle-icon">👁️</span>
+                        </button>
+                    </div>
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+                
+                <button type="submit" class="login-btn">Sign Up</button>
+                
+                <div class="signup-section">
+                    <span class="signup-text">Already have an account?</span>
+                    <a href="login.html" class="signup-link">Login now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/storage.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>

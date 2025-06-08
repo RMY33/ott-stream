@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVibe - Profile</title>
+    <link rel="stylesheet" href="styles/ex.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-navbar-left">
+            <a href="index.html" class="streamvibe-logo">
+                <img src="assets/logo.png" alt="StreamVibe Logo" class="logo">
+                <p class="streamvibe-name">StreamVibe</p>
+            </a>
+        </div>
+        
+        <nav class="nav-navbar">
+            <div class="navbar-center">
+                <ul class="nav-navbar-items">
+                    <li class="nav-items"><a href="index.html" class="nav-links">Home</a></li>
+                    <li class="nav-items"><a href="#" class="nav-links">Movies & Shows</a></li>
+                    <li class="nav-items"><a href="#" class="nav-links">Support</a></li>
+                    <li class="nav-items"><a href="#" class="nav-links">Subscriptions</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="navbar-right">
+            <div class="search-bar"> 
+                <input type="text" class="search-input" placeholder="Search..." aria-label="Search">
+                <i class="search-icon">
+                    <img src="assets/search-Icon.png" alt="search-icon">
+                </i>
+            </div>
+            <div class="notification-icon">
+                <a href="#" class="notify-icon">
+                    <i class="notify-bell-icon">
+                        <img src="assets/bell-icon.png" alt="bell-icon" class="notify-bell">
+                    </i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Authentication Section -->
+        <div class="auth-section" id="authSection">
+            <div class="user-profile" id="userProfile">
+                <div class="user-info">
+                    <img src="assets/icon-btn.png" alt="User Avatar" class="user-avatar" id="userAvatar">
+                    <span class="user-name" id="userName">User</span>
+                </div>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="profile.html" class="dropdown-item">Profile</a>
+                    <a href="#" class="dropdown-item">Settings</a>
+                    <a href="#" class="dropdown-item" id="logoutBtn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Content -->
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-banner">
+                <div class="banner-overlay"></div>
+            </div>
+            <div class="profile-info">
+                <div class="avatar-section">
+                    <img src="assets/icon-btn.png" alt="Profile Avatar" class="profile-avatar" id="profileAvatar">
+                    <button class="change-avatar-btn" id="changeAvatarBtn">
+                        <span>📷</span>
+                    </button>
+                </div>
+                <div class="user-details">
+                    <h1 class="profile-name" id="profileName">John Doe</h1>
+                    <p class="profile-email" id="profileEmail">john.doe@example.com</p>
+                    <p class="member-since">Member since <span id="memberSince">January 2024</span></p>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-primary" id="editProfileBtn">Edit Profile</button>
+                    <button class="btn-secondary" id="shareProfileBtn">Share Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Content Grid -->
+        <div class="profile-content">
+            <!-- Left Sidebar -->
+            <div class="profile-sidebar">
+                <div class="sidebar-card">
+                    <h3>Quick Stats</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">127</span>
+                            <span class="stat-label">Movies Watched</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">43</span>
+                            <span class="stat-label">TV Shows</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8.5</span>
+                            <span class="stat-label">Avg Rating</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2.3k</span>
+                            <span class="stat-label">Hours Watched</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Favorite Genres</h3>
+                    <div class="genre-tags">
+                        <span class="genre-tag">Action</span>
+                        <span class="genre-tag">Thriller</span>
+                        <span class="genre-tag">Sci-Fi</span>
+                        <span class="genre-tag">Drama</span>
+                        <span class="genre-tag">Comedy</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Subscription</h3>
+                    <div class="subscription-info">
+                        <div class="plan-badge premium">Premium Plan</div>
+                        <p class="plan-details">Unlimited streaming • 4K Quality • 5 Devices</p>
+                        <p class="renewal-date">Renews on March 15, 2024</p>
+                        <button class="btn-outline">Manage Plan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="profile-main">
+                <!-- Tabs Navigation -->
+                <div class="tabs-container">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" data-tab="overview">Overview</button>
+                        <button class="tab-btn" data-tab="watchlist">Watchlist</button>
+                        <button class="tab-btn" data-tab="history">Watch History</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews</button>
+                        <button class="tab-btn" data-tab="settings">Settings</button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- Overview Tab -->
+                        <div class="tab-pane active" id="overview">
+                            <div class="content-section">
+                                <h3>Continue Watching</h3>
+                                <div class="content-grid">
+                                    <div class="content-card">
+                                        <img src="assets/kantara-img.png" alt="Movie" class="content-image">
+                                        <div class="content-info">
+                                            <h4>Kantara</h4>
+                                            <p>Episode 1 • 45 min left</p>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-card">
+                                        <img src="assets/Image.png" alt="Movie" class="content-image">
+                                        <div class="content-info">
+                                            <h4>Action Movie</h4>
+                                            <p>1h 23min left</p>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 30%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-section">
+                                <h3>Recently Added to Watchlist</h3>
+                                <div class="content-grid">
+                                    <div class="content-card">
+                                        <img src="assets/Image (1).png" alt="Movie" class="content-image">
+                                        <div class="content-info">
+                                            <h4>New Release</h4>
+                                            <p>Action • 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-card">
+                                        <img src="assets/Image (2).png" alt="Movie" class="content-image">
+                                        <div class="content-info">
+                                            <h4>Thriller Series</h4>
+                                            <p>Drama • 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-card">
+                                        <img src="assets/Image (3).png" alt="Movie" class="content-image">
+                                        <div class="content-info">
+                                            <h4>Comedy Special</h4>
+                                            <p>Comedy • 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Watchlist Tab -->
+                        <div class="tab-pane" id="watchlist">
+                            <div class="content-section">
+                                <div class="section-header">
+                                    <h3>My Watchlist (24 items)</h3>
+                                    <div class="filter-options">
+                                        <select class="filter-select">
+                                            <option>All Types</option>
+                                            <option>Movies</option>
+                                            <option>TV Shows</option>
+                                        </select>
+                                        <select class="filter-select">
+                                            <option>Recently Added</option>
+                                            <option>A-Z</option>
+                                            <option>Rating</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="watchlist-grid">
+                                    <div class="watchlist-item">
+                                        <img src="assets/kantara-img.png" alt="Movie" class="watchlist-image">
+                                        <div class="watchlist-info">
+                                            <h4>Kantara</h4>
+                                            <p>Action • 2022 • ⭐ 8.5</p>
+                                            <button class="btn-small">Remove</button>
+                                        </div>
+                                    </div>
+                                    <!-- More watchlist items would go here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other tabs content would be similar -->
+                        <div class="tab-pane" id="history">
+                            <div class="content-section">
+                                <h3>Watch History</h3>
+                                <p class="coming-soon">Watch history content coming soon...</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="reviews">
+                            <div class="content-section">
+                                <h3>My Reviews</h3>
+                                <p class="coming-soon">Reviews content coming soon...</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="settings">
+                            <div class="content-section">
+                                <h3>Account Settings</h3>
+                                <p class="coming-soon">Settings content coming soon...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include JavaScript files -->
+    <script src="js/storage.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
